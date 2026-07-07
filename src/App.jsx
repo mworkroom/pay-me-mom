@@ -226,13 +226,15 @@ function App() {
   }
 
   async function login() {
+    if (!supabase) return;
+  
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: window.location.origin + window.location.pathname,
+        redirectTo: window.location.href.split("?")[0].split("#")[0],
       },
     });
-  }
+}
 
   async function logout() {
     await supabase.auth.signOut();
