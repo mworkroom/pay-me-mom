@@ -372,7 +372,7 @@ function App() {
 
     const url = buildSettlementImage(visibleItems, selectedMonth, visibleTotal);
     setImageUrl(url);
-    setMessage("정산 이미지를 만들었어요.");
+    setMessage("이미지를 만들었어요");
   }
 
   async function shareImage() {
@@ -552,7 +552,7 @@ function App() {
 
               <button type="button" className="secondary-button" onClick={createImage}>
                 <ImageIcon size={18} />
-                정산 이미지 만들기
+                정산 이미지
               </button>
             </div>
           </section>
@@ -571,7 +571,6 @@ function App() {
               <button type="button" className="primary-button" onClick={shareImage}>
                 공유하기
               </button>
-              <p className="hint">공유가 안 되면 이미지를 길게 눌러 저장하면 돼요.</p>
             </section>
           )}
 
