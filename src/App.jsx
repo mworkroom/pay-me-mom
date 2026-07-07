@@ -447,7 +447,6 @@ function App() {
                 <input
                   type="text"
                   value={form.title}
-                  placeholder="예: 쿠팡 생수"
                   onChange={(event) => setForm({ ...form, title: event.target.value })}
                 />
               </label>
@@ -458,7 +457,6 @@ function App() {
                   type="number"
                   inputMode="numeric"
                   value={form.amount}
-                  placeholder="12000"
                   onChange={(event) => setForm({ ...form, amount: event.target.value })}
                 />
               </label>
@@ -485,7 +483,7 @@ function App() {
                 className={showHistory ? "tab active" : "tab"}
                 onClick={() => setShowHistory(!showHistory)}
               >
-                과거 월 보기
+                지난 내역 보기
               </button>
             </div>
 
