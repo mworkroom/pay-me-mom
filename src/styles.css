@@ -115,12 +115,21 @@ h2 { margin-bottom: 0; font-size: 18px; letter-spacing: -0.02em; }
   gap: 12px;
 }
 
-.item-form { display: grid; gap: 12px; margin-top: 16px; }
+.item-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  min-width: 0;
+  overflow: hidden;
+}
 
 label {
   display: grid;
   gap: 7px;
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
+  overflow: hidden;
   color: var(--muted);
   font-size: 13px;
   font-weight: 800;
@@ -128,6 +137,7 @@ label {
 
 input {
   width: 100%;
+  max-width: 100%;
   min-width: 0;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -136,6 +146,28 @@ input {
   padding: 14px 15px;
   outline: none;
   font-size: 16px;
+}
+
+input[type="date"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-inline-size: 0;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: hidden;
+}
+
+input[type="date"]::-webkit-date-and-time-value {
+  min-width: 0;
+  text-align: left;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  margin: 0;
 }
 
 input:focus {
