@@ -463,7 +463,7 @@ function App() {
 
               <button type="submit" className="primary-button">
                 <Plus size={18} />
-                {editingItem ? "수정하기" : "추가하기"}
+                {editingItem ? "수정" : "추가"}
               </button>
             </form>
           </section>
@@ -483,7 +483,7 @@ function App() {
                 className={showHistory ? "tab active" : "tab"}
                 onClick={() => setShowHistory(!showHistory)}
               >
-                지난 내역 보기
+                지난 내역
               </button>
             </div>
 
